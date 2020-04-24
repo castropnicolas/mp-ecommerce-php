@@ -133,6 +133,7 @@
                                     <form action="/procesar-pago" method="POST">
                                         <script
                                                 src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"
+                                                data-access-token="APP_USR-6317427424180639-090914-5c508e1b02a34fcce879a999574cf5c9-469485398"
                                                 data-preference-id="<?php echo $preference->id; ?>"
                                                 data-button-label="Pagar la compra"
                                                 data-header-color="#2D3277"
