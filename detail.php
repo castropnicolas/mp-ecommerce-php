@@ -1,16 +1,12 @@
+<?php
+        header("Content-Security-Policy: default-src 'self'");
+?>
+
 <!DOCTYPE html>
 <html class="supports-animation supports-columns svg no-touch no-ie no-oldie no-ios supports-backdrop-filter as-mouseuser"
       lang="en-US">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none';
-
-    script-src      https://www.mercadopago.com.ar ;
-
-    connect-src 'none' ;
-    child-src 'none' ;
-    object-src 'none' ;">
 
     <meta name="viewport" content="width=1024">
     <title>Tienda e-commerce</title>
