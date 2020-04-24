@@ -1,7 +1,3 @@
-<?php
-        header("Content-Security-Policy: default-src 'self'; script-src https://www.mercadopago.com.ar; ");
-?>
-
 <!DOCTYPE html>
 <html class="supports-animation supports-columns svg no-touch no-ie no-oldie no-ios supports-backdrop-filter as-mouseuser"
       lang="en-US">
