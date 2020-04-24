@@ -11,11 +11,6 @@
     src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
     crossorigin="anonymous"></script>
-    <script>
-        $("#button").click(function () {
-            $("#frame").attr("src", "https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js");
-        });
-    </script>
 
     <link rel="stylesheet" href="./assets/category-landing.css" media="screen, print">
 
@@ -137,19 +132,13 @@
                                     </div>
                                     <form action="/pay.php" method="POST">
                                         <script
-                                                src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"
+                                                src="web-payment-checkout.js"
                                                 data-preference-id="<?php echo $preference->id; ?>"
                                                 data-button-label="Pagar la compra"
                                                 data-header-color="#2D3277"
                                                 data-elements-color="#2D3277"
                                         >
                                         </script>
-                                        <div id="mydiv">
-                                            <iframe id="frame" src="" width="100%" height="300">
-                                            </iframe>
-                                        </div>
-                                        <button id="button">Load</button>
-
                                     </form>
                                 </div>
                             </div>
