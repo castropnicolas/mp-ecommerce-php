@@ -77,13 +77,14 @@
 
                                 <button class="as-filter-button" aria-expanded="true" aria-controls="as-search-filters" type="button">
                                     <h2 class=" as-filter-button-text">
-                                        <span style="color:green;">Éxito :)</span>
+                                        <span>El pago fue exitoso</span>
                                     </h2>
                                     <p>
-                                        <?php echo $_GET['payment_method_id']; ?><br/>
-                                        <?php echo $_GET['transaction_amount']; ?><br/>
-                                        <?php echo $_GET['external_reference']; ?><br />
-                                        <?php echo $_GET['id']; ?>
+                                        Payment_method_id: <?php echo $_GET ?><br/>
+                                        Payment_method_id: <?php echo $_GET['payment_method_id']; ?><br/>
+                                        Transaction_amount: <?php echo $_GET['transaction_amount']; ?><br/>
+                                        External_reference: <?php echo $_GET['external_reference']; ?><br />
+                                        ID: <?php echo $_GET['id']; ?>
                                     </p>
                                 </button>
 
