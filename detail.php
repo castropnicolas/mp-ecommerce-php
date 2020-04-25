@@ -2,7 +2,7 @@
 
 $baseUrl = 'https://castropnicolas-mp-commerce-php.herokuapp.com/';
 
-require __DIR__ .  '/vendor/autoload.php';
+require __DIR__ . '/vendor/autoload.php';
 
 MercadoPago\SDK::setAccessToken('APP_USR-6317427424180639-042414-47e969706991d3a442922b0702a0da44-469485398');
 
@@ -12,7 +12,7 @@ $item = new MercadoPago\Item();
 $item->id = "1234";
 $item->title = $_POST['title'];
 $item->description = "Dispositivo móvil de Tienda e-commerce";
-$item->picture_url = $baseUrl . '/' . str_replace('./', '', $_POST['img']);
+$item->picture_url = $baseUrl . $_POST['img'];
 $item->quantity = intval($_POST['unit']);
 $item->unit_price = floatval($_POST['price']);
 $preference->items = array($item);
@@ -37,19 +37,19 @@ $payer->address = array(
 $preference->payer = $payer;
 
 $preference->payment_methods = array(
-    'excluded_payment_methods'=>array(
-        array('id'=>'amex'),
+    'excluded_payment_methods' => array(
+        array('id' => 'amex'),
     ),
-    'excluded_payment_types'=>array(
-        array('id'=>'atm'),
+    'excluded_payment_types' => array(
+        array('id' => 'atm'),
     ),
-    'installments'=>6
+    'installments' => 6
 );
 
 $preference->back_urls = array(
-    'failure'=> $baseUrl . 'failure.php',
-    'pending'=> $baseUrl . 'pending.php',
-    'success'=> $baseUrl . 'success.php'
+    'failure' => $baseUrl . 'failure.php',
+    'pending' => $baseUrl . 'pending.php',
+    'success' => $baseUrl . 'success.php'
 );
 
 $preference->notification_url = $baseUrl . 'notification.php';
@@ -571,7 +571,7 @@ $preference->save();
                                         <?php echo "$" . $_POST['unit'] ?>
                                     </h3>
                                 </div>
-                                <form method="POST">
+                                <form action="/pay.php" method="POST">
                                     <script
                                             src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"
                                             data-preference-id="<?php echo $preference->id; ?>"
