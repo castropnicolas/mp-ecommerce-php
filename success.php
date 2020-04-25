@@ -80,7 +80,7 @@
                                         <span>El pago fue exitoso</span>
                                     </h2>
                                     <p>
-                                        Payment_method_id: <?php echo $_GET ?><br/>
+                                        Print GET: <?php print_r($_GET); ?><br/>
                                         Payment_method_id: <?php echo $_GET['payment_method_id']; ?><br/>
                                         Transaction_amount: <?php echo $_GET['transaction_amount']; ?><br/>
                                         External_reference: <?php echo $_GET['external_reference']; ?><br />
