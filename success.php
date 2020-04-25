@@ -81,7 +81,8 @@
                                     </h2>
                                     <p>
                                         Print GET: <?php print_r($_GET); ?><br/>
-                                        Payment_method_id: <?php echo $_GET['payment_method_id']; ?><br/>
+                                        Print POST: <?php print_r($_POST); ?><br/>
+                                        Payment_method_id: <?php echo $_GET['payment_method ']; ?><br/>
                                         Transaction_amount: <?php echo $_GET['transaction_amount']; ?><br/>
                                         External_reference: <?php echo $_GET['external_reference']; ?><br />
                                         ID: <?php echo $_GET['id']; ?>
