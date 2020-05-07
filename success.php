@@ -463,7 +463,7 @@
                                         Método de pago: <?php echo $payment->payment_method_id ?><br/>
                                         Monto pagado: <?php echo "$" . $payment->transaction_amount ?><br/>
                                         Número de orden del pedido: <?php echo $payment->external_reference ?><br/>
-                                        ID de pago de Mercado Pago: <?php echo $payment->payment_id ?><br/>
+                                        ID de pago de Mercado Pago: <?php echo $payment->id ?><br/>
                                     </p>
 
                                 </button>
